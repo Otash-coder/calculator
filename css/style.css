@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+@keyframes animated-gradient{
+	25%{
+		 background-position: left bottom;
+	}
+	50%{
+		 background-position: right bottom;
+	}
+	75%{
+		 background-position: right top;
+	}
+	100%{
+		 background-position: left top;
+	}
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald', sans-serif;
+	box-sizing: border-box;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	align-items: center;
+	background: linear-gradient(130deg, #36d1dc , #5b86e5);
+	background-size: 200% 200%;
+	animation: animated-gradient 2s linear infinite;
+}
+
+.calculator{
+	position: relative;
+	display: grid;
+	top: 80%;
+}
+
+.calculator .value{
+	grid-column: span 4;
+	height: 100px;
+	text-align: right;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 18px;
+}
+
+.calculator span{
+	display: grid;
+	width: 60px;
+	height: 60px;
+	background: linear-gradient(130deg, #42275a , #734b6d);
+	background-size: 200% 200%;
+	animation: animated-gradient 2s linear infinite;
+	color: #ffffff;
+	place-items: center;
+	border: 1px solid #42275a;
+}
+
+
+.calculator span:active{
+	background: #74ff3b;
+	color: #111;
+}
+
+.calculator span.clear{
+	grid-column: span 2;
+	width: 120px;
+	background: linear-gradient(130deg, #de6262 , #ffb88c);
+	background-size: 200% 200%;
+   animation: animated-gradient 2s linear infinite;
+	
+}
+
+.calculator span.plus{
+	grid-row: span 2;
+	height: 120px;
+}
+
+.calculator span.equal{
+	background: linear-gradient(130deg, #de6262 , #ffb88c);
+	background-size: 200% 200%;
+   animation: animated-gradient 2s linear infinite;
+}
+
+img{
+	margin: 0;
+   position: absolute;               /* 2 */
+   top: 5%;   
+}
+
+
+
+
+
+
+
